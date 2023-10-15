@@ -10,7 +10,7 @@ const popSound = new Audio("pop.mp3");
 const scoreText = new PIXI.Text('Score: 0', {
     fontFamily: 'Barlow',
     fontSize: 40,
-    fill: 0x000000,
+    fill: 0xffffff,
     align: 'center',
 });
 const markerGraphics = new PIXI.Graphics();
@@ -131,7 +131,7 @@ function popBalloon(balloon) {
         balloon.texture = balloonTexture;
         balloon.x = Math.random() * app.screen.width;
         balloon.y = -100;
-    }, 1000)
+    }, 200)
     const sound = popSound.cloneNode();
     sound.play();
     score += 1;
